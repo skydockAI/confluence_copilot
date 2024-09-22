@@ -1,0 +1,51 @@
+modules:
+  macro:
+    - key: confluence-copilot-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: copilot
+  confluence:contentAction:
+    - key: confluence-copilot-content-action
+      resource: content_action
+      resolver:
+        function: resolver
+      render: native
+      title: Summarize
+  confluence:contextMenu:
+    - key: confluence-copilot-context-menu-polish
+      resource: context_menu
+      render: native
+      resolver:
+        function: resolver
+      title: Polish
+    - key: confluence-copilot-context-menu-translate
+      resource: context_menu
+      render: native
+      resolver:
+        function: resolver
+      title: Translate
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+  - key: content_action
+    path: src/frontend/content_action.jsx
+  - key: context_menu
+    path: src/frontend/context_menu.jsx
+permissions:
+  scopes:
+    - read:page:confluence
+    - write:confluence-content
+    - storage:app
+  external:
+    fetch:
+      backend:
+        - https://api.openai.com
+app:
+  runtime:
+    name: nodejs20.x
+  id: ari:cloud:ecosystem::app/c08d344d-d8e2-4f99-ae81-1590164faf00
