@@ -36,5 +36,40 @@ forge deploy
 forge install
 ```
 
+## Features:
+### Document Summarization: 
+Get a detailed summary of the Confluence page's content. While Confluence offers a summarization feature, it's part of the paid Atlassian Intelligence package. Confluence Copilot provides this feature as part of its core capabilities.
+<img src="/images/summarize.png" alt="Document Summarization"></img>
+
+### Key Highlights Extraction: 
+Extract essential tasks, decisions, or deadlines from the Confluence page, ensuring that important details don't get lost in lengthy documents.
+<img src="/images/highlight.png" alt="Key Highlights Extraction"></img>
+
+### Chat with Confluence Page: 
+Engage in a conversational interface where you can ask questions and get specific answers based on the content of the Confluence page.
+<img src="/images/question.png" alt="Chat with Confluence Page"></img>
+
+### Technical Term Explanation: 
+Simply select a technical term, and the AI model will provide a clear and concise explanation, making complex terminology more accessible.
+<img src="/images/explain.png" alt="Technical Term Explanation"></img>
+
+### Polish Content: 
+Select a phrase, sentence, or paragraph, and the AI model will refine and improve the writing for better clarity and style.
+<img src="/images/polish.png" alt="Polish Content"></img>
+
+### Language Translation: 
+Choose a piece of text and translate it into another language effortlessly.
+<img src="/images/translate.png" alt="Language Translation"></img>
+
+### Multi-Module Support:
+- **Macro Module**: Supports features like Summarize, Highlight, and Chat with Confluence pages.
+<img src="/images/macro.png" alt="Macro Module"></img>
+
+- **Content Action Module**: Offers the Summarization feature.
+<img src="/images/content_action.png" alt="Content Action Module"></img>
+
+- **Context Menu Module**: Provides Explain, Polish, and Translate functionalities.
+<img src="/images/context_menu.png" alt="Context Menu Module"></img>
+
 ## License:
-**Slides Assistant** is open-source and licensed under the [GPL-3.0](LICENSE) license.
+**Confluence Copilot** is open-source and licensed under the [GPL-3.0](LICENSE) license.

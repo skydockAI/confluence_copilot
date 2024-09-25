@@ -14,6 +14,12 @@ modules:
       render: native
       title: Summarize
   confluence:contextMenu:
+    - key: confluence-copilot-context-menu-explain
+      resource: context_menu
+      render: native
+      resolver:
+        function: resolver
+      title: Explain
     - key: confluence-copilot-context-menu-polish
       resource: context_menu
       render: native

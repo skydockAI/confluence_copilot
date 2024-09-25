@@ -15,7 +15,6 @@ const ai_client = Config.OPENAI_KEY && Config.OPENAI_KEY.trim() !== ''
 const resolver = new Resolver();
 
 resolver.define('callFeature', async (req) => {
-  console.log(req);
   const pageId = req.context.extension.content.id;
   const response = await api.asUser().requestConfluence(route`/wiki/api/v2/pages/${pageId}?body-format=view`, {
     headers: {
@@ -49,11 +48,16 @@ resolver.define('callFeature', async (req) => {
 });
 
 resolver.define('contextMenu', async (req) => {
-  console.log(req);
   const selectedText = req.context.extension.selectedText;
   const moduleKey = req.context.moduleKey;
   var prompt = "";
   switch(moduleKey){
+    case "confluence-copilot-context-menu-explain":
+      prompt = `${Config.EXPLAIN_PROMPT}\n${selectedText}`;
+      break;
+    case "confluence-copilot-context-menu-translate":
+      prompt = `${Config.TRANSLATE_PROMPT}\n${selectedText}`;
+      break;
     case "confluence-copilot-context-menu-polish":
       prompt = `${Config.POLISH_PROMPT}\n${selectedText}`;
       break;
